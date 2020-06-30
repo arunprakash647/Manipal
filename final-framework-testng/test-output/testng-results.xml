@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18390" started-at="2020-06-30T09:36:44 IST" finished-at="2020-06-30T09:37:02 IST">
+  <suite name="Default suite" duration-ms="40018" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:20 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18390" started-at="2020-06-30T09:36:44 IST" finished-at="2020-06-30T09:37:02 IST">
-      <class name="com.training.sanity.tests.FilterOrdersTests">
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.training.sanity.tests.FilterOrdersTests@614ddd49]" name="setUpBrowser" is-config="true" duration-ms="8240" started-at="2020-06-30T09:36:44 IST" finished-at="2020-06-30T09:36:52 IST">
+    <test name="Default test" duration-ms="40018" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:20 IST">
+      <class name="com.training.sanity.tests.elearningTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="setUpBeforeClass" is-config="true" duration-ms="11" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:27:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.training.sanity.tests.FilterOrdersTests@614ddd49]" name="loginTest" duration-ms="2940" started-at="2020-06-30T09:36:52 IST" finished-at="2020-06-30T09:36:55 IST">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="setUp" is-config="true" duration-ms="28406" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:08 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="filterOrdersTest()[pri:2, instance:com.training.sanity.tests.FilterOrdersTests@614ddd49]" name="filterOrdersTest" duration-ms="5856" started-at="2020-06-30T09:36:55 IST" finished-at="2020-06-30T09:37:01 IST">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validRegisterTeacherTest()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="validRegisterTeacherTest" duration-ms="10367" started-at="2020-06-30T10:28:08 IST" finished-at="2020-06-30T10:28:19 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filterOrdersTest -->
-        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.training.sanity.tests.FilterOrdersTests@614ddd49]" name="tearBrowser" is-config="true" duration-ms="1239" started-at="2020-06-30T09:37:01 IST" finished-at="2020-06-30T09:37:02 IST">
+        </test-method> <!-- validRegisterTeacherTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="tearDown" is-config="true" duration-ms="1163" started-at="2020-06-30T10:28:19 IST" finished-at="2020-06-30T10:28:20 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearBrowser -->
-      </class> <!-- com.training.sanity.tests.FilterOrdersTests -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.elearningTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
