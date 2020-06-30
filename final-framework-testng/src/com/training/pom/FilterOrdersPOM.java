@@ -1,0 +1,60 @@
+package com.training.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class FilterOrdersPOM {
+	private WebDriver driver; 	
+	
+	public FilterOrdersPOM(WebDriver driver) {
+		this.driver = driver; 
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//i[@class='fa fa-shopping-cart fa-fw']")
+	private WebElement salesIcon;
+	
+	@FindBy(xpath="//li[@id='sale']//li[@class='active open']//a[contains(text(),'Orders')]")
+	private WebElement ordersIcon;
+	
+	@FindBy(id="input-date-modified")
+	private WebElement dateModified;
+	
+	@FindBy(id="input-date-added")
+	private WebElement dateAdded;
+	
+	@FindBy(id="button-filter")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="//div[@id='container']//tbody//td[6]")
+	private WebElement listDateAdded;
+	
+	public void moveOverSales() {
+		Actions action = new Actions(driver);
+		action.moveToElement(salesIcon).build().perform();
+	}
+	
+	public void clickOrders() {
+		Actions action = new Actions(driver);
+		action.moveToElement(ordersIcon).click().build().perform();
+	}
+	
+	public void sendDateAdded(String date) {
+		this.dateAdded.sendKeys(date);
+	}
+	
+	public void sendDateModified(String date) {
+		this.dateModified.sendKeys(date);
+	}
+	
+	public void clickFilterBtn() {
+		this.filterBtn.click();
+	}
+	
+	public String listDateAddedGetText() {
+		return this.listDateAdded.getText();
+	}
+}

@@ -13,14 +13,17 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id="login")
+	@FindBy(id="input-username")
 	private WebElement userName; 
 	
-	@FindBy(id="password")
+	@FindBy(id="input-password")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(xpath="//button[@class='btn btn-primary']")
 	private WebElement loginBtn; 
+	
+	@FindBy(xpath="//body/div[@id='container']/header[@id='header']/ul[@class='nav pull-right']/li[4]/a[1]")
+	private WebElement logoutBtn;
 	
 	public void sendUserName(String userName) {
 		this.userName.clear();
@@ -34,5 +37,9 @@ public class LoginPOM {
 	
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
+	}
+	
+	public void clickLogoutBtn() {
+		this.logoutBtn.click(); 
 	}
 }
