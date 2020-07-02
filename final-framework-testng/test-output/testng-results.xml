@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40018" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:20 IST">
+  <suite name="Default suite" duration-ms="17069" started-at="2020-07-01T10:32:29 IST" finished-at="2020-07-01T10:32:46 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40018" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:20 IST">
-      <class name="com.training.sanity.tests.elearningTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="setUpBeforeClass" is-config="true" duration-ms="11" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:27:40 IST">
+    <test name="Default test" duration-ms="17069" started-at="2020-07-01T10:32:29 IST" finished-at="2020-07-01T10:32:46 IST">
+      <class name="com.training.sanity.tests.DeleteProductsTests">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.training.sanity.tests.DeleteProductsTests@614ddd49]" name="setUpBrowser" is-config="true" duration-ms="6899" started-at="2020-07-01T10:32:29 IST" finished-at="2020-07-01T10:32:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="setUp" is-config="true" duration-ms="28406" started-at="2020-06-30T10:27:40 IST" finished-at="2020-06-30T10:28:08 IST">
+        </test-method> <!-- setUpBrowser -->
+        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.training.sanity.tests.DeleteProductsTests@614ddd49]" name="loginTest" duration-ms="4303" started-at="2020-07-01T10:32:36 IST" finished-at="2020-07-01T10:32:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validRegisterTeacherTest()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="validRegisterTeacherTest" duration-ms="10367" started-at="2020-06-30T10:28:08 IST" finished-at="2020-06-30T10:28:19 IST">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="productFilterTest()[pri:2, instance:com.training.sanity.tests.DeleteProductsTests@614ddd49]" name="productFilterTest" duration-ms="2725" started-at="2020-07-01T10:32:41 IST" finished-at="2020-07-01T10:32:43 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validRegisterTeacherTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.elearningTest@1f554b06]" name="tearDown" is-config="true" duration-ms="1163" started-at="2020-06-30T10:28:19 IST" finished-at="2020-06-30T10:28:20 IST">
+        </test-method> <!-- productFilterTest -->
+        <test-method status="PASS" signature="deleteFilterTest()[pri:3, instance:com.training.sanity.tests.DeleteProductsTests@614ddd49]" name="deleteFilterTest" duration-ms="1893" started-at="2020-07-01T10:32:43 IST" finished-at="2020-07-01T10:32:45 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.elearningTest -->
+        </test-method> <!-- deleteFilterTest -->
+        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.training.sanity.tests.DeleteProductsTests@614ddd49]" name="tearBrowser" is-config="true" duration-ms="1187" started-at="2020-07-01T10:32:45 IST" finished-at="2020-07-01T10:32:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearBrowser -->
+      </class> <!-- com.training.sanity.tests.DeleteProductsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

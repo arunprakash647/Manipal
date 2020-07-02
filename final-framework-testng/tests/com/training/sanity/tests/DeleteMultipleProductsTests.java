@@ -54,6 +54,7 @@ public class DeleteMultipleProductsTests {
 			driver.quit();
 		}
 		
+		//Method to login to the application
 		@Test(priority=1)
 		public void loginTest() {
 			screenShot.captureScreenShot("1.LoginPage");
@@ -63,6 +64,7 @@ public class DeleteMultipleProductsTests {
 			screenShot.captureScreenShot("2.HomePage");
 		}
 		
+		//Method to filter the products
 		@Test(priority=2)
 		public void productFilterTest() {
 			productsFilterPOM.mouseOverCatlog();
@@ -75,13 +77,17 @@ public class DeleteMultipleProductsTests {
 			Assert.assertEquals(actualVerify, expectedVerify);
 		}
 		
+		//Method to delete the product
 		@Test(priority=3)
 		public void deleteFilterTest() throws InterruptedException {
 			deleteMultipleProductsPOM.selectMultipleCheckBox();
 			screenShot.captureScreenShot("5.ProductSelectedList");
 			deleteProductsPOM.clickDeleteBtn();
 			driver.switchTo().alert().accept();
-			deleteProductsPOM.successMessageDisplayed();
+			String expected = "Success: You have modified products!";
+			String actualText = deleteProductsPOM.successMessageGetText();
+			Boolean expectedText = actualText.contains(expected);
+			Assert.assertTrue(expectedText);
 			screenShot.captureScreenShot("6.DeleteConfirmationMessage");
 		}
 

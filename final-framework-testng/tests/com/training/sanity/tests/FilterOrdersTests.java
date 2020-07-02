@@ -45,6 +45,7 @@ public class FilterOrdersTests {
 		driver.quit();
 	}
 	
+	//Method to login to the application
 	@Test(priority=1)
 	public void loginTest() {
 		screenShot.captureScreenShot("1.LoginPage");
@@ -54,6 +55,7 @@ public class FilterOrdersTests {
 		screenShot.captureScreenShot("2.HomePage");
 	}
 	
+	//Method to filter the orders
 	@Test(priority=2)
 	public void filterOrdersTest() {
 		int day = 24;

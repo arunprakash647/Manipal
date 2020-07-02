@@ -47,6 +47,7 @@ public class ProductsFilterTests{
 		driver.quit();
 	}
 	
+	//Method to login to the application
 	@Test(priority=1)
 	public void loginTest() {
 		screenShot.captureScreenShot("1.LoginPage");
@@ -56,6 +57,7 @@ public class ProductsFilterTests{
 		screenShot.captureScreenShot("2.HomePage");
 	}
 	
+	//Method to filter the product
 	@Test(priority=2)
 	public void productFiltertest() {
 		productsFilterPOM.mouseOverCatlog();

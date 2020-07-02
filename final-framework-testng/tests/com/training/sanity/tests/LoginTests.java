@@ -29,7 +29,8 @@ public class LoginTests {
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 	}
-
+	
+	//Method to launch browser and the url in the same
 	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.FIREFOX);
@@ -40,11 +41,14 @@ public class LoginTests {
 		driver.get(baseUrl);
 	}
 	
+	//Method to close or quit the browser
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
 	}
+	
+	//Method to login to the application
 	@Test
 	public void validLoginTest() {
 		screenShot.captureScreenShot("1.LoginPage");

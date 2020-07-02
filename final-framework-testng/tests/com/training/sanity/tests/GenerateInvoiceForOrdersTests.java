@@ -48,6 +48,7 @@ public class GenerateInvoiceForOrdersTests {
 		driver.quit();
 	}
 	
+	//Method to login to the application
 	@Test(priority=1)
 	public void loginTest() {
 		screenShot.captureScreenShot("1.LoginPage");
@@ -57,6 +58,7 @@ public class GenerateInvoiceForOrdersTests {
 		screenShot.captureScreenShot("2.HomePage");
 	}
 	
+	//Method to filter the Orders
 	@Test(priority=2)
 	public void filterOrdersTest() {
 		int day = 24;
@@ -71,6 +73,7 @@ public class GenerateInvoiceForOrdersTests {
 		Assert.assertEquals(actualListDate, expectedListDate);
 	}
 	
+	//Method to Generate invoice number
 	@Test(priority=3)
 	public void generateInvoiceTest() {
 		generateInvoiceForOrdersPOM.clickViewBtn();

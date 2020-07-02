@@ -13,9 +13,11 @@ public class DeleteMultipleProductsPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//We element for selecting multiple check boxes
 	@FindBy(xpath="//thead//input")
 	private WebElement checkMultipleBox;
 	
+	//Method for selecting multiple check boxes
 	public void selectMultipleCheckBox() {
 		this.checkMultipleBox.click();
 	}

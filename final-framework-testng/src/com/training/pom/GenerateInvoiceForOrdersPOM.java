@@ -13,23 +13,29 @@ private WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Web element for View button
 	@FindBy(xpath="//tr[1]//td[8]//a[1]")
 	WebElement viewBtn;
 	
+	//Web element for Generate button
 	@FindBy(xpath="//button[@id='button-invoice']//i[@class='fa fa-cog']")
 	WebElement generateBtn;
 	
+	//Web element for Invoice number
 	@FindBy(xpath="//td[@id='invoice']")
 	WebElement invoiceNumber;
 	
+	//Method to click on View button
 	public void clickViewBtn() {
 		this.viewBtn.click();
 	}
 	
+	//Method to click on Generate button
 	public void clickGenerateBtn() {
 		this.generateBtn.click();
 	}
 	
+	//Method to check if Invoice number is displayed
 	public void invoiceNumberDisplayed() {
 		this.invoiceNumber.isDisplayed();
 	}
