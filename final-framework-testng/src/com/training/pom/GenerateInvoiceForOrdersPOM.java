@@ -36,7 +36,7 @@ private WebDriver driver;
 	}
 	
 	//Method to check if Invoice number is displayed
-	public void invoiceNumberDisplayed() {
-		this.invoiceNumber.isDisplayed();
+	public boolean invoiceNumberDisplayed() {
+		return this.invoiceNumber.isDisplayed();
 	}
 }

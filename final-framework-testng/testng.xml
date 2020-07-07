@@ -5,7 +5,7 @@
    <test name = "Sample test">
       <classes>
          <class name = "com.training.sanity.tests.LoginTests" />
-         <class name = "com.training.sanity.tests.ProductsFilterTests" />
+         <class name = "com.training.sanity.tests.FilterProductsExtendsTests" />
       </classes>
    </test>
 </suite>	

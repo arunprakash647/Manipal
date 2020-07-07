@@ -16,8 +16,8 @@ import com.training.pom.ProductsFilterPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class ProductsFilterTests{
-	
+public class ProductsFilterTests extends LoginTests{
+
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;

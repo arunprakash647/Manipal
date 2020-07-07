@@ -25,7 +25,7 @@ public class LoginPOM {
 	private WebElement loginBtn; 
 	
 	//Web element for Logout button field
-	@FindBy(xpath="//body/div[@id='container']/header[@id='header']/ul[@class='nav pull-right']/li[4]/a[1]")
+	@FindBy(xpath="//span[@class='hidden-xs hidden-sm hidden-md']")
 	private WebElement logoutBtn;
 	
 	//Method to Clear any data in Username field and enter the correct Username
@@ -48,5 +48,9 @@ public class LoginPOM {
 	//Method to click on Logout button
 	public void clickLogoutBtn() {
 		this.logoutBtn.click(); 
+	}
+	
+	public boolean logoutBtnDisplayed() {
+		return this.logoutBtn.isDisplayed();
 	}
 }

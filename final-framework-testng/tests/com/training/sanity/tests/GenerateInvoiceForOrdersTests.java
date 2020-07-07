@@ -1,5 +1,6 @@
 package com.training.sanity.tests;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -10,6 +11,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.training.generics.ScreenShot;
 import com.training.pom.FilterOrdersPOM;
 import com.training.pom.GenerateInvoiceForOrdersPOM;
@@ -25,12 +29,18 @@ public class GenerateInvoiceForOrdersTests {
 	private GenerateInvoiceForOrdersPOM generateInvoiceForOrdersPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	static ExtentTest extentTest;
+	static ExtentReports extentReports;
 
 	@BeforeClass
 	public void setUpBrowser() throws IOException {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
+		
+		extentReports = new ExtentReports("./test-output/TestResults.html");
+		extentReports.loadConfig(new File("./test-output/extent-config.xml"));
+		extentTest = extentReports.startTest("Login");
 		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver);
@@ -70,7 +80,13 @@ public class GenerateInvoiceForOrdersTests {
 		filterOrdersPOM.clickFilterBtn();
 		String actualListDate = filterOrdersPOM.listDateAddedGetText();
 		String expectedListDate = day+ "/" + month + "/" + year;
-		Assert.assertEquals(actualListDate, expectedListDate);
+		//Assert.assertEquals(actualListDate, expectedListDate);
+		boolean assertActualText = actualListDate.contains(expectedListDate);
+		if(assertActualText) {
+			extentTest.log(LogStatus.PASS, "Filter Orders Successful");
+		}else {
+			extentTest.log(LogStatus.FAIL, "Filter Orders Un-Successful");
+		}
 	}
 	
 	//Method to Generate invoice number
@@ -78,6 +94,10 @@ public class GenerateInvoiceForOrdersTests {
 	public void generateInvoiceTest() {
 		generateInvoiceForOrdersPOM.clickViewBtn();
 		generateInvoiceForOrdersPOM.clickGenerateBtn();
-		generateInvoiceForOrdersPOM.invoiceNumberDisplayed();
+		if (generateInvoiceForOrdersPOM.invoiceNumberDisplayed()) {
+			extentTest.log(LogStatus.PASS, "Invoice Generated");
+		}else {
+			extentTest.log(LogStatus.FAIL, "Invoice NOT Generated");
+		}
 	}
 }
