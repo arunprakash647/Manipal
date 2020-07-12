@@ -54,8 +54,40 @@ public class ELearningDAO {
 		return list; 
 	}
 	
+	public List<LoginBean> getProductDetails(){
+		String sql = properties.getProperty("get.productDetails"); 
+		
+		GetConnection gc  = new GetConnection(); 
+		List<LoginBean> list = null;
+		try {
+			gc.ps1 = GetConnection.getMySqlConnection(LoadDBDetails.getDBDetails()).prepareStatement(sql); 
+			list = new ArrayList<LoginBean>(); 
+			
+			gc.rs1 = gc.ps1.executeQuery(); 
+			
+			while(gc.rs1.next()) {
+			
+				LoginBean temp = new LoginBean(); 
+				temp.getProductName();
+				temp.getMetaTagTitle();
+				temp.getModel();
+				temp.getPrice();
+				temp.getQuantity();
+				temp.getCategory();
+
+				list.add(temp); 
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return list; 
+	}
+	
 	public static void main(String[] args) {
 		new ELearningDAO().getLogins().forEach(System.out :: println);
+		new ELearningDAO().getProductDetails().forEach(System.out :: println);
 	}
 	
 	

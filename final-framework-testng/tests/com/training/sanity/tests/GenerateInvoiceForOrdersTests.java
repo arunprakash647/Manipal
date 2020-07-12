@@ -40,7 +40,7 @@ public class GenerateInvoiceForOrdersTests {
 		
 		extentReports = new ExtentReports("./test-output/TestResults.html");
 		extentReports.loadConfig(new File("./test-output/extent-config.xml"));
-		extentTest = extentReports.startTest("Login");
+		extentTest = extentReports.startTest("Generate Invoice for Orders");
 		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver);

@@ -45,9 +45,13 @@ public class FilterOrdersPOM {
 	}
 	
 	//Method to click on Order icon
+//	public void clickOrders() {
+//		Actions action = new Actions(driver);
+//		action.moveToElement(ordersIcon).click().build().perform();
+//	}
+	
 	public void clickOrders() {
-		Actions action = new Actions(driver);
-		action.moveToElement(ordersIcon).click().build().perform();
+		this.ordersIcon.click();
 	}
 	
 	//Method to enter date in Date Added field

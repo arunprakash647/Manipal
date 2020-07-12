@@ -43,7 +43,7 @@ public class DeleteProductsTests {
 			
 			extentReports = new ExtentReports("./test-output/TestResults.html");
 			extentReports.loadConfig(new File("./test-output/extent-config.xml"));
-			extentTest = extentReports.startTest("Delete Multiple Products");
+			extentTest = extentReports.startTest("Delete Products");
 			
 			driver = DriverFactory.getDriver(DriverNames.CHROME);
 			loginPOM = new LoginPOM(driver);

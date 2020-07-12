@@ -46,7 +46,7 @@ public class EditProductsTests {
 		
 		extentReports = new ExtentReports("./test-output/TestResults.html");
 		extentReports.loadConfig(new File("./test-output/extent-config.xml"));
-		extentTest = extentReports.startTest("Login");
+		extentTest = extentReports.startTest("Edit Products");
 		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver);
