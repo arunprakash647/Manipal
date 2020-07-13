@@ -68,12 +68,12 @@ public class ELearningDAO {
 			while(gc.rs1.next()) {
 			
 				LoginBean temp = new LoginBean(); 
-				temp.getProductName();
-				temp.getMetaTagTitle();
-				temp.getModel();
-				temp.getPrice();
-				temp.getQuantity();
-				temp.getCategory();
+				temp.setProductName(gc.rs1.getString(1));
+				temp.setMetaTagTitle(gc.rs1.getString(2));
+				temp.setModel(gc.rs1.getString(3));
+				temp.setPrice(gc.rs1.getString(4));
+				temp.setQuantity(gc.rs1.getString(5));
+				temp.setCategory(gc.rs1.getString(6));
 
 				list.add(temp); 
 				
@@ -86,7 +86,7 @@ public class ELearningDAO {
 	}
 	
 	public static void main(String[] args) {
-		new ELearningDAO().getLogins().forEach(System.out :: println);
+		//new ELearningDAO().getLogins().forEach(System.out :: println);
 		new ELearningDAO().getProductDetails().forEach(System.out :: println);
 	}
 	
